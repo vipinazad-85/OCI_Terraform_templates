@@ -21,6 +21,9 @@ source_details {
 		source_id = "ocid1.image.oc1.ap-mumbai-1.aaaaaaaazw753qijtnuynq6wrd3rmiayquc3kpijc7j5akprmvyzhcdhxsxq"
 		source_type = "image"
 	}
+  metadata = {
+        ssh_authorized_keys = var.ssh_public_key
+    }
 }
 
 

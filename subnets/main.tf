@@ -8,4 +8,6 @@ resource "oci_core_subnet" "test_subnet" {
   vcn_id              = var.vcn_id
   route_table_id      = var.vcn_default_route_table_id
   dhcp_options_id     = var.vcn_default_dhcp_options_id
+  prohibit_public_ip_on_vnic = var.subnet_prohibit_public_ip_on_vnic
 }
+
