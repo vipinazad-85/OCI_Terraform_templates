@@ -36,20 +36,6 @@ variable "DMZ_subnet_prohibit_public_ip_on_vnic" {default = "true"}
 variable "route_table_display_name" {default = "route_table_IG"}
 
 
-data "oci_identity_compartments" "lab_compartments" {
-     compartment_id = var.compartment_id
-     # only retain the compartment called lab-compartment
-     #filter {
-     #    name   = "name"
-     #    values  = [ "test_lab"]
-     #}
- }
-
-
-output "lab_compartment" {
-  value = data.oci_identity_compartments.lab_compartments
-}
-
 data "oci_identity_availability_domain" "ad" {
   compartment_id = var.compartment_id
   ad_number      = 1

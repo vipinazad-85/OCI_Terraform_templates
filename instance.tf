@@ -2,7 +2,7 @@
 resource "oci_core_instance" "test_instance" {
   count               = var.num_instances
   availability_domain = data.oci_identity_availability_domain.ad.name
-  compartment_id      = var.compartment_id
+  compartment_id      = module.compartment.cid
   display_name        = "TestInstance${count.index}"
 
   #shape_config {

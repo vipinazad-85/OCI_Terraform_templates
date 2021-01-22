@@ -1,5 +1,5 @@
 resource "oci_core_route_table" "route_table" {
-  compartment_id = var.compartment_id
+  compartment_id = module.compartment.cid
   vcn_id = module.CreateVCN.vcn.id
   display_name = var.route_table_display_name
 

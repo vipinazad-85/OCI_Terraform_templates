@@ -1,5 +1,5 @@
 resource "oci_core_security_list" "http_list" {
-  compartment_id = var.compartment_id
+  compartment_id = module.compartment.cid
   vcn_id = module.CreateVCN.vcn.id
   display_name = "http_security_list"
 
